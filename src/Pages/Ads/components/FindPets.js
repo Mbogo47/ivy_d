@@ -167,64 +167,55 @@ const FindPets = () => {
         <div className="find-pets-container">
           <ul>
             {/* <Collapse isOpen={isFilterOpen} vertical> */}
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
-                  <DropdownToggle className="dropdown-style">
-                    Gender
-                    <FaAngleDown />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      Male
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      Female
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Dropdown>
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
-                  <DropdownToggle className="dropdown-style">
-                    Age
-                    <FaAngleDown />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      0-3 years
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      3-6 years
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      more than 6 years
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Dropdown>
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
-                  <DropdownToggle className="dropdown-style">
-                    Price
-                    <FaAngleDown />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Input
-                        type="range"
-                        min="50"
-                        max="5000"
-                        className="slider"
-                      />
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Dropdown>
+            <Dropdown isOpen={dropdown} toggle={toggle}>
+              <UncontrolledDropdown className="me-2" direction="down">
+                <DropdownToggle className="dropdown-style">
+                  Gender
+                  <FaAngleDown />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>
+                    <Input type="checkbox" />
+                    Male
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Input type="checkbox" />
+                    Female
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Dropdown>
+            <Dropdown isOpen={dropdown} toggle={toggle}>
+              <UncontrolledDropdown className="me-2" direction="down">
+                <DropdownToggle className="dropdown-style">
+                  {t("age")}
+                  <FaAngleUp />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>{t("0-3_years")}</DropdownItem>
+                  <DropdownItem>{t("3-6_years")}</DropdownItem>
+                  <DropdownItem>{t("more_than_6_years")}</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Dropdown>
+            <Dropdown isOpen={dropdown} toggle={toggle}>
+              <UncontrolledDropdown className="me-2" direction="down">
+                <DropdownToggle className="dropdown-style">
+                  Pric
+                  <FaAngleDown />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>
+                    <Input
+                      type="range"
+                      min="50"
+                      max="5000"
+                      className="slider"
+                    />
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Dropdown>
             {/* </Collapse> */}
             <IoFilter
               style={{ fontSize: "2rem", color: "#a6652c" }}

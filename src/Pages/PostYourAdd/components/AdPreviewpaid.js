@@ -5,13 +5,14 @@ import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./adpreview.scss";
-
+import { useTranslation } from "react-i18next";
 // swiper css
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
 
 const AdPreviewpaid = () => {
+  const { t } = useTranslation();
   const [swiper, setSwiper] = useState(null);
 
   const adSwiper = [
@@ -77,7 +78,7 @@ const AdPreviewpaid = () => {
         </div>
         <div className="DetailsHalf">
           <div className="TopSection">
-            <button className="DraftButton">Move to drafts</button>
+            <button className="DraftButton">{t("movetodrafts")}</button>
             <div className="MatingTag">
               <span>$50</span>
               <br></br>
@@ -85,9 +86,9 @@ const AdPreviewpaid = () => {
             </div>
           </div>
           <div className="PetInfo">
-            <p>Name: John</p>
-            <p>Gender: Male</p>
-            <p>Age: 1</p>
+            <p>{t("name")}: John</p>
+            <p>{t("gender")}: Male</p>
+            <p>{t("age")}: 1</p>
             <p>
               Here is a preview of the description of the pet, but they have to
               view the full ad to learn more...
@@ -95,12 +96,12 @@ const AdPreviewpaid = () => {
           </div>
 
           <div className="AdActions">
-            <button className="ViewAdButton">View ad</button>
+            <button className="ViewAdButton">{t("viewad")}</button>
             <button
               className="EditButton"
               style={{ background: "transparent", color: "#a6652c" }}
             >
-              Edit
+              {t("edit")}
             </button>
           </div>
         </div>

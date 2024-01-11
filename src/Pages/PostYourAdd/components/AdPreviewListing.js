@@ -9,6 +9,7 @@ import { FaMoneyBillWave } from "react-icons/fa"; import { BsSend } from "react-
 // swiper css
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import { useTranslation } from "react-i18next";
 
 //Import Blog images
 // import AdImage1 from "https://th.bing.com/th?id=OIP.DLaNbmQkUO02zxquS2de4wHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2";
@@ -17,7 +18,7 @@ import AdImage3 from "../../../assets/images/ads/ad-image-3.jpg";
 
 const AdPreview = () => {
   const [swiper, setSwiper] = useState(null);
-
+  const { t } = useTranslation();
   const adSwiper = [
     {
       id: 1,
@@ -81,7 +82,7 @@ const AdPreview = () => {
         </div>
         <div className="DetailsHalf">
           <div className="TopSection">
-            <button className="DraftButton">Move to drafts</button>
+            <button className="DraftButton"></button>
             <div className="MatingTag">
               <span>$50</span>
               <br></br>
@@ -89,9 +90,9 @@ const AdPreview = () => {
             </div>
           </div>
           <div className="PetInfo">
-            <p>Name: John</p>
-            <p>Gender: Male</p>
-            <p>Age: 1</p>
+            <p>{t("name")}: John</p>
+            <p>{t("gender")}: Male</p>
+            <p>{t("age")}: 1</p>
             <p>
               Here is a preview of the description of the pet, but they have to
               view the full ad to learn more...
@@ -104,7 +105,7 @@ const AdPreview = () => {
               className="EditButton"
               style={{ background: "transparent", color: "#a6652c" }}
             >
-              Edit
+              {t("edit")}
             </button>
           </div>
         </div>
@@ -116,7 +117,6 @@ const AdPreview = () => {
             Pay for Ad <FaMoneyBillWave />
           </button> */}
           <button className="sendButton">
-            
             <BsSend />
           </button>
         </div>

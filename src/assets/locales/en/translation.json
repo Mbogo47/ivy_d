@@ -271,6 +271,7 @@
   "postandpay": "Post and Pay",
   "paidAdMessage": "Your ad has been posted!",
   "edit": "Edit",
+  "movetodrafts": "Move to Drafts",
   "notpaidadmessage": "Remember that you can’t remove your ad until you pay for it",
   "deletepaidadmessage": "Are you sure you want to delete this ad?",
   "deletenotpaidadmessage": "You need to pay for this ad before you can delete it",
@@ -283,5 +284,6 @@
   "understand": "I understand",
   "goBack": "Go Back",
   "signin": "Sign In",
-  "signup": "Sign Up"
+  "signup": "Sign Up",
+  "name": "Name"
 }

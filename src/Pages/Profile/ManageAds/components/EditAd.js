@@ -187,7 +187,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petType" className="form-label">
-                      {t("pettype ")}
+                      {t("pettype")}*
                     </Label>
                     <select
                       className="form-select form-select-lg mb-3"
@@ -297,7 +297,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                   {/* City */}
                   <div className="mb-4">
                     <Label htmlFor="city" className="form-label">
-                      {t("City*")}
+                      {t("city_label*")}
                     </Label>
                     <Input
                       type="text"
@@ -305,7 +305,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       id="city"
                       placeholder={t("city_placeholder")}
                       name="city"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                     />
                   </div>
@@ -314,7 +314,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                   {/* Zip Code */}
                   <div className="mb-4">
                     <Label htmlFor="zipcode" className="form-label">
-                      {t("Zip Code")}
+                      {t("zipcode__label")}
                     </Label>
                     <Input
                       type="text"

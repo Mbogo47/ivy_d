@@ -28,6 +28,7 @@ export const translations = {
     pettype: "Pet Type",
     price: "Price",
     editad: "Edit Ad",
+    name: "Name",
     petname: "Pet Name",
     petDescription: "Pet Description",
     petGender: "Pet Gender",
