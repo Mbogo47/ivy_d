@@ -31,7 +31,11 @@ import { set } from "react-hook-form";
 
 const IntegratedNavbar = () => {
   const [language, setLanguage] = useState(localStorage.getItem("lang") || 'en')
+  const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
 
+  const toggleBarsMenu = () => {
+    setBarsMenuOpen(!isBarsMenuOpen);
+  };
   const changeLang = (l) => {
     
     i18next.changeLanguage(l);
@@ -44,12 +48,6 @@ const IntegratedNavbar = () => {
     changeLang(l);
     // setIsOpen(false);
   }
-  const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
-
-  const toggleBarsMenu = () => {
-    setBarsMenuOpen(!isBarsMenuOpen);
-  };
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -57,7 +55,7 @@ const IntegratedNavbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
-  // const currentLanguage = localStorage.getItem("lang") || "ar"; // Default to 'ar' if no language is set
+  const currentLanguage = localStorage.getItem("lang") || "en";// Default to 'ar' if no language is set
 
   const { t } = useTranslation();
   const [userCountry, setUserCountry] = useState("Loading...");
