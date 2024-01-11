@@ -36,7 +36,18 @@ const IntegratedNavbar = () => {
   const toggleBarsMenu = () => {
     setBarsMenuOpen(!isBarsMenuOpen);
   };
+  const changeLang = (l) => {
+    
+    i18next.changeLanguage(l);
+    localStorage.setItem('lang', l);
+    // console.log(l);
+  };
 
+  const handleLanguageChange = (l) => { 
+    setLanguage(l);
+    changeLang(l);
+    // setIsOpen(false);
+  }
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
