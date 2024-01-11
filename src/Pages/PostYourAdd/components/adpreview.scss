@@ -1,0 +1,348 @@
+// .AdCard {
+//   display: flex;
+//   flex-direction: column;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   margin: 10px;
+//   padding: 10px;
+//   background-color: #fff;
+//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+// .half{
+//   display: flex;
+//   justify-content: space-between;
+
+
+// .ImageHalf {
+//   width: 50%;
+//   max-width: 50%;
+//   overflow: hidden;
+//   position: relative;
+
+//   .swiper-container {
+//     width: 100%;
+//     height: 100%;
+
+//     .swiper-wrapper {
+//       display: flex;
+//       align-items: center; // Center images vertically
+//     }
+
+//     .swiper-slide {
+//       flex-shrink: 0; // Prevent images from growing
+//       width: 100%;
+//       height: 100%;
+
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         border-radius: 8px;
+//       }
+//     }
+//   }
+
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     font-size: 1.5rem;
+//     color: #fff;
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     cursor: pointer;
+//     z-index: 10;
+
+//     &:hover {
+//       background-color: #a6652c;
+//     }
+//   }
+
+//   .swiper-button-prev {
+//     left: 10px;
+//   }
+
+//   .swiper-button-next {
+//     right: 10px;
+//   }
+// }
+
+//       }
+    
+
+//     .swiper-button-prev,
+//     .swiper-button-next {
+//       font-size: 1.5rem;
+//       color: #fff;
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       cursor: pointer;
+//       z-index: 10;
+
+//       &:hover {
+//         background-color: #a6652c;
+//       }
+//     }
+
+//     .swiper-button-prev {
+//       left: 10px;
+//     }
+
+//     .swiper-button-next {
+//       right: 10px;
+//     }
+  
+  
+//   .DetailsHalf {
+//     width: 50%;
+//     padding-left: 20px; // Adjust the padding as needed
+
+//     .TopSection {
+//       margin-bottom: 10px;
+//     }
+
+    // .DraftButton {
+    //   color: #a6652c;
+    //   // color: #fff;
+    //   background: transparent;
+    //   border: none;
+    //   // padding: 8px;
+    //   text-align: start;
+    //   border-radius: 4px;
+    //   cursor: pointer;
+    // }
+
+    // .PetInfo {
+    //   margin-left: 4px;
+    //   h2 {
+    //     margin-top: 0;
+    //   }
+
+    //   p {
+    //     margin: 5px 0;
+    //   }
+    // }
+
+  //   .AdActions {
+  //     display: flex;
+
+  //     margin-top: 10px;
+
+  //     @media screen and (max-width: 767px) {
+  //       display: block;
+  //     }
+
+  //     .ViewAdButton,
+  //     .EditButton {
+  //       background-color: #a6652c;
+  //       color: #fff;
+  //       border: none;
+  //       padding: 8px;
+  //       border-radius: 4px;
+  //       cursor: pointer;
+  //       margin-right: 10px;
+
+  //       &.EditButton {
+  //         background-color: #a6652c;
+  //       }
+  //     }
+  //   }
+  // }}
+
+//   .MatingTag {
+//     background-color: #f8f8f8;
+//     color: #000;
+//     padding: 5px;
+//     border-radius: 4px;
+//     margin-top: 10px;
+//     display: inline-block;
+//   }
+
+  // .PayButton,
+  // .DeleteButton {
+  //   background-color: transparent;
+  //   color: black;
+  //   border: none;
+  //   padding: 8px;
+  //   border-radius: 4px;
+  //   cursor: pointer;
+  //   margin-right: 10px;
+
+  //   &.DeleteButton {
+  //     background-color: transparent;
+  //     color: red;
+  //   }
+  // }
+
+// .swiperbuttons {
+//   position: absolute;
+//   top: 50%;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   transform: translateY(-50%);
+
+//   button {
+//     background-color: #a6652c;
+//     color: #fff;
+//     border: none;
+//     padding: 8px;
+//     border-radius: 4px;
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: #875124; /* Darker shade on hover */
+//     }
+//   }
+// }
+.AdCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .onehalf {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    // Styles for the ImageHalf section
+    .ImageHalf {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 8px;
+     
+
+      img {
+        // width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      .swiper-button-prev,
+      .swiper-button-next{
+        font-size: 2.5rem;
+        color: #000;
+      }
+    }
+    .DetailsHalf {
+      flex: 1;
+      padding: 0 20px;
+
+      .TopSection {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+         .MatingTag {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        background-color: #f8f8f8;
+        color: #8f4300;
+        padding: 5px;
+        border-radius: 4px;
+        padding: 0 20px;
+      
+        display: inline-block;
+      }
+
+           .DraftButton {
+      color: #a6652c;
+      // color: #fff;
+      background: transparent;
+      border: none;
+      // padding: 8px;
+      text-align: start;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+      }
+  }
+  }
+      .PetInfo {
+      margin-left: 5px;
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        margin:20px 5px ;
+      }
+      margin-bottom: 30px;
+    }
+
+     
+          .AdActions {
+      display: flex;
+
+      margin-top: 10px;
+
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+
+      .ViewAdButton{
+        background-color: #8f4300;
+        color: #fff;
+        border: none;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+         &:hover {
+      background-color: #875124; }}
+      .EditButton {
+        background-color: #8f4300;
+        color: #fff;
+        border: none;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &.EditButton {
+          background-color: #a6652c;
+        }
+      }
+    }
+    .BottomSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;    
+
+    .RightBottomSection {
+      display: flex;
+      align-items: center;
+    }
+
+    .LeftBottomSection {
+      display: flex;
+      align-items: center;
+      
+
+        .PayButton,
+  .DeleteButton, .sendButton {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    &.DeleteButton {
+      background-color: transparent;
+      color: red;
+    } 
+     &.sendButton {
+      background-color: transparent;
+      color: #a6652c;
+    }
+  }
+    }
+  }
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>Image Upload</title>
+<style>
+  .image-upload-container {
+    display: inline-block;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .image-preview-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #image-preview {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-upload-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .change-button {
+    display: block;
+    background-color: #f0ad4e;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+  }
+
+  .image-upload-label {
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<div class="image-upload-container">
+    <div class="image-preview-container">
+        <img id="image-preview" src="placeholder-image.jpg" alt="Main" />
+        <div class="image-upload-overlay">
+            <label for="image-upload-input" class="change-button">Upload</label>
+            <input id="image-upload-input" type="file" onchange="previewImage(event)" style="display: none;" />
+        </div>
+    </div>
+    <div class="image-upload-label">Main image</div>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+</div>
+
+<script>
+  function previewImage(event) {
+    const reader = new FileReader();
+    reader.onload = function() {
+      const output = document.getElementById('image-preview');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</body>
+</html>
