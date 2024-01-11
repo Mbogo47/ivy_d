@@ -167,7 +167,6 @@ const FindPets = () => {
         <div className="find-pets-container">
           <ul>
             {/* <Collapse isOpen={isFilterOpen} vertical> */}
-<<<<<<< HEAD
             <Dropdown isOpen={dropdown} toggle={toggle}>
               <UncontrolledDropdown className="me-2" direction="down">
                 <DropdownToggle className="dropdown-style">
@@ -188,22 +187,6 @@ const FindPets = () => {
             </Dropdown>
             <Dropdown isOpen={dropdown} toggle={toggle}>
               <UncontrolledDropdown className="me-2" direction="down">
-=======
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
-                <DropdownToggle className="dropdown-style">
-                  {t("gender")}
-                  <FaAngleUp />
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>{t("female")}</DropdownItem>
-                  <DropdownItem>{t("male")}</DropdownItem>
-                </DropdownMenu>
-                </UncontrolledDropdown>
-              </Dropdown>
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
->>>>>>> 7ba9acc0b4d4aa8e8afa00ef1cc0a00554d7c818
                 <DropdownToggle className="dropdown-style">
                   {t("age")}
                   <FaAngleUp />
@@ -213,7 +196,6 @@ const FindPets = () => {
                   <DropdownItem>{t("3-6_years")}</DropdownItem>
                   <DropdownItem>{t("more_than_6_years")}</DropdownItem>
                 </DropdownMenu>
-<<<<<<< HEAD
               </UncontrolledDropdown>
             </Dropdown>
             <Dropdown isOpen={dropdown} toggle={toggle}>
@@ -234,28 +216,6 @@ const FindPets = () => {
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Dropdown>
-=======
-                </UncontrolledDropdown>
-              </Dropdown>
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
-                  <DropdownToggle className="dropdown-style">
-                    {t("price")}
-                    <FaAngleDown />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Input
-                        type="range"
-                        min="50"
-                        max="5000"
-                        className="slider"
-                      />
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Dropdown>
->>>>>>> 7ba9acc0b4d4aa8e8afa00ef1cc0a00554d7c818
             {/* </Collapse> */}
             <IoFilter
               style={{ fontSize: "2rem", color: "#a6652c" }}

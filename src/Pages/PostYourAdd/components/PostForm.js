@@ -516,11 +516,7 @@ const PostForm = () => {
                     toggle={openModel}
                     style={{ border: "none", textAlign: "center" }}
                   >
-<<<<<<< HEAD
                    { t("adposted")}
-=======
-                     {t("adposted")}
->>>>>>> 7ba9acc0b4d4aa8e8afa00ef1cc0a00554d7c818
                   </ModalHeader>
                   <ModalBody style={{ textAlign: "center" }}>
                     {t("notpaidadmessage")}
@@ -544,11 +540,7 @@ const PostForm = () => {
                       }}
                       className="signin"
                     >
-<<<<<<< HEAD
                       {t("manageads")}
-=======
-                      {t("manage_ads")}
->>>>>>> 7ba9acc0b4d4aa8e8afa00ef1cc0a00554d7c818
                     </button>
                     <button
                       onclick={openModel}
