@@ -145,7 +145,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                     rows="10"
                     placeholder={t("pet_description_placeholder")}
                     name="description"
-                    style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                    style={{ border: " 1px solid #A6652C", color: "#000" }}
                     required
                   ></textarea>
                 </div>
@@ -179,7 +179,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       id="petAge"
                       placeholder={t("pet_age_placeholder")}
                       name="age"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                     />
                   </div>
@@ -252,7 +252,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       id="petPrice"
                       placeholder={t("pet_price_placeholder")}
                       name="price"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                     />
                   </div>
@@ -322,7 +322,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       id="zipcode"
                       placeholder={t("zipcode_placeholder")}
                       name="zipcode"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                     />
                   </div>
                 </Col>

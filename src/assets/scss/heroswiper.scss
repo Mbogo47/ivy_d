@@ -69,10 +69,12 @@
   .action-buttons {
     display: flex;
     justify-content: center;
+    
 
     .post-ad-button {
       background: #A6652C;
       color: #fff;
+      white-space: nowrap;
       &:hover {
         background-color: #8f4300; 
       
@@ -82,7 +84,7 @@
     .view-ads-button {
       background-color: #fff; 
       color: #000;
-      
+      white-space: nowrap;
       &:hover {
         background-color: #f0f0f0;
       }

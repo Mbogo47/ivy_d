@@ -57,7 +57,7 @@ const BottomBar = () => {
                 </DropdownToggle>
                 <DropdownMenu>
                   <li>{t("cats")}</li>
-                  <li>{t("chicken")}</li>
+                  <li>{t("chickens")}</li>
                   <li>{t("horses")}</li>
                   <li>{t("dogs")}</li>
                   <li>{t("cows")}</li>

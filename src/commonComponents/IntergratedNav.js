@@ -24,33 +24,42 @@ import {
 import { signOutAsync } from "../store/reducers/auth.reducer";
 import { GetUserProfileAsync } from "../../src/store/reducers/auth.reducer";
 // import { useLanguage } from "../store/reducers/languageContext.js";
-import {toast} from "react-toastify"
+import { toast } from "react-toastify";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-const changeLang = (l) => {
-  return () => {
-    i18next.changeLanguage(l);
-    localStorage.setItem('lang', l);
-  }
-}
+import { set } from "react-hook-form";
 
 const IntegratedNavbar = () => {
-const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
+  const [language, setLanguage] = useState(localStorage.getItem("lang") || 'en')
+
+  const changeLang = (l) => {
+    
+    i18next.changeLanguage(l);
+    localStorage.setItem('lang', l);
+    // console.log(l);
+  };
+
+  const handleLanguageChange = (l) => { 
+    setLanguage(l);
+    changeLang(l);
+    // setIsOpen(false);
+  }
+  const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
 
   const toggleBarsMenu = () => {
     setBarsMenuOpen(!isBarsMenuOpen);
   };
 
-   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-   const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
-  const currentLanguage = localStorage.getItem('lang') || "ar"; // Default to 'ar' if no language is set
+  // const currentLanguage = localStorage.getItem("lang") || "ar"; // Default to 'ar' if no language is set
 
-   const {t} = useTranslation();
+  const { t } = useTranslation();
   const [userCountry, setUserCountry] = useState("Loading...");
   const countryFlagContainerRef = useRef();
 
@@ -79,7 +88,6 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
       <Navbar className="mobile-navbar">
         <div>
           <span ref={countryFlagContainerRef}></span>
-          <span> </span>
           <span>{t("your_country")}</span>
         </div>
         <div>
@@ -100,24 +108,23 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
                     color: "#000",
                   }}
                 >
-                  
                   {t("languages")}
                   <FaAngleDown />
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem
-                    onClick={changeLang("ar")}
+                    onClick={() => handleLanguageChange("ar")}
                     className={`dropdown-item notify-item language ${
-                      currentLanguage === "ar" ? "active" : ""
+                      language === "ar" ? "active" : ""
                     }`}
                     data-lang="ar"
                   >
                     <span className="align-middle">عربي</span>
                   </DropdownItem>
                   <DropdownItem
-                    onClick={changeLang("en")}
+                    onClick={() => handleLanguageChange("en")}
                     className={`dropdown-item notify-item language ${
-                      currentLanguage === "en" ? "active" : ""
+                      language === "en" ? "active" : ""
                     }`}
                     data-lang="en"
                   >
@@ -127,19 +134,19 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
               </Dropdown>
             </NavItem>
             <NavItem>
-              <button className="signup">
-                <NavLink href="/signup">
-                  <span>{t("signin_sign_up")}</span>
-                </NavLink>
-              </button>
+              <Link to="/signup" className="signup">
+                <span>{t("signin_sign_up")}</span>
+              </Link>
             </NavItem>
             <NavItem>
-              <button className="signin">
-                <NavLink href="/signin">{t("signin_button")}</NavLink>
-              </button>
+              <Link to="/signin" className="signin">
+                {t("signin_button")}
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/">{t("home")}</NavLink>
+              <NavLink href="/" style={{ color: "#000 !important" }}>
+                {t("home")}
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/about">{t("about")}</NavLink>
@@ -159,7 +166,8 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
           <ul className="quick-links">
             <li className="nav-items">
               <span ref={countryFlagContainerRef}></span>
-              <span>Your Country</span>
+              <span> </span>
+              <span>{t("your_country")}</span>
             </li>
 
             <li>
@@ -181,19 +189,19 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
         <div>
           <ul className="auth">
             <li>
-              <Link to="/">
+              <Link to="/" style={{ color: "#000 !important" }}>
                 <FaHome />
               </Link>
             </li>
             <li>
-              <button className="signin">
-                <Link to="/signin">{t("signin_button")}</Link>
-              </button>
+              <Link to="/signin" className="signin">
+                {t("signin_button")}
+              </Link>
             </li>
             <li>
-              <button className="signup">
-                <Link to="/signup">{t("signin_sign_up")}</Link>
-              </button>
+              <Link to="/signup" className="signup">
+                {t("signin_sign_up")}
+              </Link>
             </li>
             <li>
               <Dropdown isOpen={dropdownOpen} toggle={toggle}>
@@ -205,23 +213,22 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
                     color: "#000",
                   }}
                 >
-              
                   <FaAngleDown />
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem
-                    onClick={() => changeLang("ar")}
+                    onClick={() => handleLanguageChange("ar")}
                     className={`dropdown-item notify-item language ${
-                      currentLanguage === "ar" ? "active" : ""
+                      language === "ar" ? "active" : ""
                     }`}
                     data-lang="ar"
                   >
                     <span className="align-middle">عربي</span>
                   </DropdownItem>
                   <DropdownItem
-                    onClick={() => changeLang("en")}
+                    onClick={() => handleLanguageChange("en")}
                     className={`dropdown-item notify-item language ${
-                      currentLanguage === "en" ? "active" : ""
+                      language === "en" ? "active" : ""
                     }`}
                     data-lang="en"
                   >

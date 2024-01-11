@@ -173,7 +173,7 @@ const PostForm = () => {
           >
             <div
               className="job-post-content box-shadow-md rounded-3 p-4"
-              style={{ backgroundColor: "#fff" }}
+              style={{ backgroundColor: "#fff", color: "#000" }}
             >
               <Col lg={12}>
                 <div className="mb-4">
@@ -186,7 +186,7 @@ const PostForm = () => {
                     id="jobtitle"
                     placeholder="Name"
                     name="name"
-                    style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                    style={{ border: " 1px solid #A6652C", color: "#000" }}
                     required
                   />
                 </div>
@@ -202,7 +202,7 @@ const PostForm = () => {
                     rows="10"
                     placeholder={t("pet_description_placeholder")}
                     name="description"
-                    style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                    style={{ border: " 1px solid #A6652C", color: "#00" }}
                     required
                   ></textarea>
                 </div>
@@ -236,7 +236,7 @@ const PostForm = () => {
                       className="form-control"
                       id="petAge"
                       name="age"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                       placeholder={t("petAge")}
                     />
@@ -311,7 +311,7 @@ const PostForm = () => {
                       id="petPrice"
                       placeholder={t("pet_price_placeholder")}
                       name="price"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                     />
                   </div>
@@ -381,7 +381,7 @@ const PostForm = () => {
                       id="zipcode"
                       placeholder={t("zipcode_placeholder")}
                       name="zipcode"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                     />
                   </div>
                 </Col>
@@ -432,20 +432,6 @@ const PostForm = () => {
                 lg={12}
                 style={{ display: "flex", justifyContent: "space-between" }}
               >
-                <Link onClick={openModal}>
-                  <button
-                    style={{
-                      color: "#fff",
-                      background: "#A6652C",
-                      border: "none",
-                      padding: "10px",
-                      borderRadius: "10px",
-                      margin: "0 10px 10px 10px",
-                    }}
-                  >
-                    {t("postandpay")}
-                  </button>
-                </Link>
                 <Link onClick={openModel}>
                   <button
                     style={{
@@ -458,6 +444,20 @@ const PostForm = () => {
                     }}
                   >
                     {t("postandpayLater")}
+                  </button>
+                </Link>
+                <Link onClick={openModal}>
+                  <button
+                    style={{
+                      color: "#fff",
+                      background: "#A6652C",
+                      border: "none",
+                      padding: "10px",
+                      borderRadius: "10px",
+                      margin: "0 10px 10px 10px",
+                    }}
+                  >
+                    {t("postandpay")}
                   </button>
                 </Link>
               </Col>
@@ -493,7 +493,7 @@ const PostForm = () => {
                       }}
                       className="secondary-btn"
                     >
-                     {t("edit")}
+                      {t("edit")}
                     </button>
                     <button
                       onclick={openModal}

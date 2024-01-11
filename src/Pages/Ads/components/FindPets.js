@@ -166,7 +166,7 @@ const FindPets = () => {
         {/* Mobile version */}
         <div className="find-pets-container">
           <ul>
-            <Collapse isOpen={isFilterOpen}>
+            {/* <Collapse isOpen={isFilterOpen} vertical> */}
               <Dropdown isOpen={dropdown} toggle={toggle}>
                 <UncontrolledDropdown className="me-2" direction="down">
                   <DropdownToggle className="dropdown-style">
@@ -225,7 +225,7 @@ const FindPets = () => {
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Dropdown>
-            </Collapse>
+            {/* </Collapse> */}
             <IoFilter
               style={{ fontSize: "2rem", color: "#a6652c" }}
               onClick={toggleFilter}

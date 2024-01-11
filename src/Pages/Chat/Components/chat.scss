@@ -1,0 +1,12 @@
+.send{
+      background-color: #8f4300;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  
+  &:hover {
+    background-color: #a6652c;
+  }
+}

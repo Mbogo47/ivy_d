@@ -11,15 +11,28 @@ import {
   MDBTextArea,
   MDBCardHeader,
 } from "mdb-react-ui-kit";
+import { useTranslation } from "react-i18next";
+import { FaSearch } from "react-icons/fa";
+import { Input } from "reactstrap";
+// import "../../../assets/scss/heroswiper.scss";
+import "./chat.scss"
 
 const Chat = () => {
+  const { t } = useTranslation();
   return (
     <MDBContainer fluid className="py-5" style={{ backgroundColor: "#eee" }}>
       <MDBRow>
         <MDBCol md="6" lg="5" xl="4" className="mb-4 mb-md-0">
-          <h5 className="font-weight-bold mb-3 text-center text-lg-start">
-            Member
-          </h5>
+           
+          <div className="search-container" style={{marginBottom: "10px"}}>
+            {/* <FaSearch className="search-icon" /> */}
+            <Input
+              type="search"
+              className="form-control filter-input-box"
+              id="exampleFormControlInput1"
+              placeholder={t("search")}
+            />
+          </div>
 
           <MDBCard>
             <MDBCardBody>
@@ -267,13 +280,7 @@ const Chat = () => {
                 rows={4}
               />
             </li>
-            <MDBBtn
-              rounded
-              className="float-end"
-              style={{ backgroundColorolor: "#a6652c" }}
-            >
-              Send
-            </MDBBtn>
+            <button className="send">Send</button>
           </MDBTypography>
         </MDBCol>
       </MDBRow>
