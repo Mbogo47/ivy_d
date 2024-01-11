@@ -10,6 +10,9 @@
   "range": "Area Range",
   "miles": "Miles",
   "any": "Any",
+  
+  "pet_gender": "Pet Gender",
+  "petAge": "Pet Age",
   "0-3_years": "0-3 years",
   "3-6_years": "3-6 years",
   "more_than_6_years": "More than 6 years",

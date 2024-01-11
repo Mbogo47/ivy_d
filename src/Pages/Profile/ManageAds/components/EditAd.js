@@ -121,7 +121,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
               <Col lg={12}>
                 <div className="mb-4">
                   <Label htmlFor="petName" className="form-label">
-                    {t("Pet Name *")}
+                    {t("pet_name_label")} *
                   </Label>
                   <Input
                     type="text"
@@ -137,7 +137,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
               <Col lg={12}>
                 <div className="mb-4">
                   <Label htmlFor="petDescription" className="form-label">
-                    {t("Pet Description*")}
+                    {t("pet_description_label")} *
                   </Label>
                   <textarea
                     className="form-control"
@@ -154,7 +154,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petGender" className="form-label">
-                      {t("Pet Gender *")}
+                      {t("pet_gender")}*
                     </Label>
                     <select
                       className="form-select form-select-lg mb-3"
@@ -171,7 +171,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petAge" className="form-label">
-                      {t("Pet Age *")}
+                      {t("petAge")}*
                     </Label>
                     <Input
                       type="number"
@@ -187,7 +187,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petType" className="form-label">
-                      {t("Pet Type *")}
+                      {t("pettype ")}
                     </Label>
                     <select
                       className="form-select form-select-lg mb-3"
@@ -196,28 +196,28 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       name="pet_type"
                       required
                     >
-                      <option selected>Dog</option>
-                      <option value="1">Sheep</option>
-                      <option value="2">Goat</option>
-                      <option value="3">Parrot</option>
-                      <option value="4">Cat</option>
-                      <option value="5">Chicken</option>
-                      <option value="6">Horse</option>
-                      <option value="7">Cow</option>
-                      <option value="8">Fish </option>
-                      <option value="9">Turtle</option>
-                      <option value="10">Rabbit</option>
-                      <option value="11">Duck</option>
-                      <option value="12">Squirrel</option>
-                      <option value="13">Hamster</option>
-                      <option value="14">Pigeon</option>
+                      <option selected>{t("dogs")}</option>
+                      <option value="1">{t("sheep")}</option>
+                      <option value="2">{t("goats")}</option>
+                      <option value="3">{t("parrots")}</option>
+                      <option value="4">{t("cats")}</option>
+                      <option value="5">{t("chickens")}</option>
+                      <option value="6">{t("horses")}</option>
+                      <option value="7">{t("cows")}</option>
+                      <option value="8">{t("fish_and_turtles")}</option>
+                      {/* <option value="9">Turtle</option> */}
+                      <option value="10">{t("rabbits")}</option>
+                      <option value="11">{t("ducks")}</option>
+                      <option value="12">{t("squirrels")}</option>
+                      <option value="13">{t("hamsters")}</option>
+                      <option value="14">{t("pigeons")}</option>
                     </select>
                   </div>
                 </Col>
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="adType" className="form-label">
-                      {t("Type of Ad *")}
+                      {t("ad_type_label")}*
                     </Label>
                     <select
                       className="form-select"
@@ -244,7 +244,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                   {/* Price */}
                   <div className="mb-4">
                     <Label htmlFor="petPrice" className="form-label">
-                      {t("Pet Price *")}
+                      {t("pet_price_label")}*
                     </Label>
                     <Input
                       type="number"
@@ -260,7 +260,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={6}>
                   {/* Main Image */}
                   <ImageUpload
-                    label="Main Image"
+                    label={t("mainImage")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -269,7 +269,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={4}>
                   {/* Other Image 1 */}
                   <ImageUpload
-                    label="Other Image 1"
+                    label={t("otherImage")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -278,7 +278,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={4}>
                   {/* Other Image 2 */}
                   <ImageUpload
-                    label="Other Image 2"
+                    label={t("otherImage")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -287,7 +287,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                 <Col lg={4}>
                   {/* Other Image 3 */}
                   <ImageUpload
-                    label="Other Image 3"
+                    label={t("otherImage")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -342,7 +342,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                     margin: "0 10px 10px 10px",
                   }}
                 >
-                  Preview Ad
+                  {t("previewAd")}
                 </button>
               </Col>
             </Row>
@@ -362,7 +362,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                     }}
                     className="secondary-btn"
                   >
-                    Cancel
+                    {t("cancel")}
                   </button>
                 </Link>
                 <button
@@ -372,7 +372,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                   }}
                   className="primary-btn"
                 >
-                  Save changes
+                  {t("saveChanges")}
                 </button>
               </Col>
             </Row>
@@ -390,7 +390,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       style={{ border: "none", textAlign: "center" }}
                     ></ModalHeader>
                     <ModalBody style={{ textAlign: "center" }}>
-                      Your changes won't be saved
+                      {t("cancelMessage")}
                     </ModalBody>
                     <ModalFooter
                       style={{
@@ -409,7 +409,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                           margin: "0 10px 10px 10px",
                         }}
                       >
-                        Go back
+                        {t("goBack")}
                       </button>
                       <button
                         style={{
@@ -421,7 +421,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                           margin: "0 10px 10px 10px",
                         }}
                       >
-                        I understand
+                        {t("understand")}
                       </button>
                     </ModalFooter>
                   </Modal>

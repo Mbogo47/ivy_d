@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import placeholderimg from "../../../assets/images/placeholder.png";
+import { useTranslation } from "react-i18next";
 
 const ImageUpload = ({ label }) => {
   const [preview, setPreview] = useState(placeholderimg);
@@ -11,6 +12,7 @@ const ImageUpload = ({ label }) => {
     };
     reader.readAsDataURL(event.target.files[0]);
   };
+  const {t} = useTranslation();
 
   return (
     <>
@@ -55,7 +57,7 @@ const ImageUpload = ({ label }) => {
                 margin: "10px auto 0",
               }}
             >
-              Upload
+              {t("upload")}
             </label>
             <input
               id={`image-upload-input-${label}`}

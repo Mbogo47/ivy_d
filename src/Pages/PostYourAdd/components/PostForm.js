@@ -211,13 +211,14 @@ const PostForm = () => {
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petGender" className="form-label">
-                      {t("pet_gender_label")}*
+                      {t("pet_gender")}*
                     </Label>
                     <select
                       className="form-select form-select-lg mb-3"
                       aria-label="Large select example"
                       style={{ border: " 1px solid #A6652C", color: "#000" }}
                       name="gender"
+                      placeholder={t("pet_gender")}
                       required
                     >
                       <option selected>Female</option>
@@ -228,23 +229,23 @@ const PostForm = () => {
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petAge" className="form-label">
-                      {t("Pet Age *")}
+                      {t("petAge")}*
                     </Label>
                     <Input
                       type="number"
                       className="form-control"
                       id="petAge"
-                      placeholder={t("pet_age_placeholder")}
                       name="age"
                       style={{ border: " 1px solid #A6652C", color: "#fff" }}
                       required
+                      placeholder={t("petAge")}
                     />
                   </div>
                 </Col>
                 <Col lg={6}>
                   <div className="mb-4">
                     <Label htmlFor="petType" className="form-label">
-                      {t("Pet Type *")}
+                      {t("pettype")}*
                     </Label>
                     <select
                       className="form-select form-select-lg mb-3"
@@ -252,22 +253,23 @@ const PostForm = () => {
                       style={{ border: " 1px solid #A6652C", color: "#000" }}
                       name="pet_type"
                       required
+                      placeholder={t("pettype ")}
                     >
-                      <option selected>Dog</option>
-                      <option value="1">Sheep</option>
-                      <option value="2">Goat</option>
-                      <option value="3">Parrot</option>
-                      <option value="4">Cat</option>
-                      <option value="5">Chicken</option>
-                      <option value="6">Horse</option>
-                      <option value="7">Cow</option>
-                      <option value="8">Fish </option>
-                      <option value="9">Turtle</option>
-                      <option value="10">Rabbit</option>
-                      <option value="11">Duck</option>
-                      <option value="12">Squirrel</option>
-                      <option value="13">Hamster</option>
-                      <option value="14">Pigeon</option>
+                      <option selected>{t("dogs")}</option>
+                      <option value="1">{t("sheep")}</option>
+                      <option value="2">{t("goats")}</option>
+                      <option value="3">{t("parrots")}</option>
+                      <option value="4">{t("cats")}</option>
+                      <option value="5">{t("chickens")}</option>
+                      <option value="6">{t("horses")}</option>
+                      <option value="7">{t("cows")}</option>
+                      <option value="8">{t("fish_and_turtles")}</option>
+                      {/* <option value="9">Turtle</option> */}
+                      <option value="10">{t("rabbits")}</option>
+                      <option value="11">{t("ducks")}</option>
+                      <option value="12">{t("squirrels")}</option>
+                      <option value="13">{t("hamsters")}</option>
+                      <option value="14">{t("pigeons")}</option>
                     </select>
                   </div>
                 </Col>
@@ -301,7 +303,7 @@ const PostForm = () => {
                   {/* Price */}
                   <div className="mb-4">
                     <Label htmlFor="petPrice" className="form-label">
-                      {t("Pet Price *")}
+                      {t("pet_price_label")}*
                     </Label>
                     <Input
                       type="number"
@@ -317,7 +319,7 @@ const PostForm = () => {
                 <Col lg={6}>
                   {/* Main Image */}
                   <ImageUpload
-                    label="Main Image"
+                    label={t("mainImage")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -326,7 +328,7 @@ const PostForm = () => {
                 <Col lg={4}>
                   {/* Other Image 1 */}
                   <ImageUpload
-                    label="Other Image 1"
+                    label={t("otherImages")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -335,7 +337,7 @@ const PostForm = () => {
                 <Col lg={4}>
                   {/* Other Image 2 */}
                   <ImageUpload
-                    label="Other Image 2"
+                    label={t("otherImages")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -344,7 +346,7 @@ const PostForm = () => {
                 <Col lg={4}>
                   {/* Other Image 3 */}
                   <ImageUpload
-                    label="Other Image 3"
+                    label={t("otherImages")}
                     onChange={(files) => handleImageChange(files, setMainImage)}
                     previewImage={mainImage}
                   />
@@ -354,7 +356,7 @@ const PostForm = () => {
                   {/* City */}
                   <div className="mb-4">
                     <Label htmlFor="city" className="form-label">
-                      {t("City*")}
+                      {t("city_label")} *
                     </Label>
                     <Input
                       type="text"
@@ -371,7 +373,7 @@ const PostForm = () => {
                   {/* Zip Code */}
                   <div className="mb-4">
                     <Label htmlFor="zipcode" className="form-label">
-                      {t("Zip Code")}
+                      {t("zipcode_label")}
                     </Label>
                     <Input
                       type="text"
@@ -408,7 +410,7 @@ const PostForm = () => {
                     border: "none",
                   }}
                 >
-                  Save as Draft
+                  {t("saveasDraft")}
                 </button>
                 <button
                   style={{
@@ -420,7 +422,7 @@ const PostForm = () => {
                     margin: "0 10px 10px 10px",
                   }}
                 >
-                  Preview Ad
+                  {t("previewAd")}
                 </button>
               </Col>
             </Row>
@@ -441,7 +443,7 @@ const PostForm = () => {
                       margin: "0 10px 10px 10px",
                     }}
                   >
-                    Post and Pay
+                    {t("postandpay")}
                   </button>
                 </Link>
                 <Link onClick={openModel}>
@@ -455,7 +457,7 @@ const PostForm = () => {
                       margin: "0 10px 10px 10px",
                     }}
                   >
-                    Post and pay later
+                    {t("postandpayLater")}
                   </button>
                 </Link>
               </Col>
@@ -470,7 +472,7 @@ const PostForm = () => {
                     Ad Posted
                   </ModalHeader>
                   <ModalBody style={{ textAlign: "center" }}>
-                    Your Ad has been posted!
+                    {t("paidAdMessage")}
                   </ModalBody>
                   <ModalFooter
                     style={{
@@ -491,7 +493,7 @@ const PostForm = () => {
                       }}
                       className="secondary-btn"
                     >
-                      Edit
+                     {t("edit")}
                     </button>
                     <button
                       onclick={openModal}
@@ -500,7 +502,7 @@ const PostForm = () => {
                       }}
                       className="primary-btn"
                     >
-                      View ad
+                      {t("Viewads")}
                     </button>
                   </ModalFooter>
                 </Modal>
@@ -517,8 +519,7 @@ const PostForm = () => {
                     Ad Posted
                   </ModalHeader>
                   <ModalBody style={{ textAlign: "center" }}>
-                    Your Ad has been posted! Remember that you can't remove your
-                    ad until you pay for it.
+                    {t("notpaidadmessage")}
                   </ModalBody>
                   <ModalFooter
                     style={{
@@ -552,7 +553,7 @@ const PostForm = () => {
                         margin: "0 10px 10px 10px",
                       }}
                     >
-                      Pay for your ad
+                      {t("payforad")}
                     </button>
                   </ModalFooter>
                 </Modal>

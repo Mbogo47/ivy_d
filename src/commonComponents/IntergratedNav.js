@@ -205,7 +205,7 @@ const [isBarsMenuOpen, setBarsMenuOpen] = useState(false);
                     color: "#000",
                   }}
                 >
-                  Language
+              
                   <FaAngleDown />
                 </DropdownToggle>
                 <DropdownMenu>

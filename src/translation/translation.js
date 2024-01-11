@@ -18,7 +18,7 @@ export const translations = {
     morepets: "More Pets",
     heroparagraph: "Adopt, sell, rescue or find your missing pet",
     postyourad: " Post Your Ad",
-    viewads: "View Ads",
+    viewads: "View Ad",
     findpets: "Find Pets",
     search: "Search",
     entertext: "Enter Text",

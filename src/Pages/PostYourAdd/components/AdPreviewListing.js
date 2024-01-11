@@ -68,10 +68,10 @@ const AdPreview = () => {
               </SwiperSlide>
             ))}
             <div className="swiper-button-prev" onClick={handlePrev}>
-              <FaAngleLeft />
+              {/* <FaAngleLeft /> */}
             </div>
             <div className="swiper-button-next" onClick={handleNext}>
-              <FaAngleRight />
+              {/* <FaAngleRight /> */}
             </div>
           </Swiper>
           {/* <img
