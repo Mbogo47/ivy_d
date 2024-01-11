@@ -305,7 +305,7 @@ const [mainImage, setMainImage] = useState(placeholderimg);
                       id="city"
                       placeholder={t("city_placeholder")}
                       name="city"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                     />
                   </div>

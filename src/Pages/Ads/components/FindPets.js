@@ -169,48 +169,33 @@ const FindPets = () => {
             {/* <Collapse isOpen={isFilterOpen} vertical> */}
               <Dropdown isOpen={dropdown} toggle={toggle}>
                 <UncontrolledDropdown className="me-2" direction="down">
-                  <DropdownToggle className="dropdown-style">
-                    Gender
-                    <FaAngleDown />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      Male
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      Female
-                    </DropdownItem>
-                  </DropdownMenu>
+                <DropdownToggle className="dropdown-style">
+                  {t("gender")}
+                  <FaAngleUp />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>{t("female")}</DropdownItem>
+                  <DropdownItem>{t("male")}</DropdownItem>
+                </DropdownMenu>
+                </UncontrolledDropdown>
+              </Dropdown>
+              <Dropdown isOpen={dropdown} toggle={toggle}>
+                <UncontrolledDropdown className="me-2" direction="down">
+                <DropdownToggle className="dropdown-style">
+                  {t("age")}
+                  <FaAngleUp />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>{t("0-3_years")}</DropdownItem>
+                  <DropdownItem>{t("3-6_years")}</DropdownItem>
+                  <DropdownItem>{t("more_than_6_years")}</DropdownItem>
+                </DropdownMenu>
                 </UncontrolledDropdown>
               </Dropdown>
               <Dropdown isOpen={dropdown} toggle={toggle}>
                 <UncontrolledDropdown className="me-2" direction="down">
                   <DropdownToggle className="dropdown-style">
-                    Age
-                    <FaAngleDown />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      0-3 years
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      3-6 years
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Input type="checkbox" />
-                      more than 6 years
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Dropdown>
-              <Dropdown isOpen={dropdown} toggle={toggle}>
-                <UncontrolledDropdown className="me-2" direction="down">
-                  <DropdownToggle className="dropdown-style">
-                    Price
+                    {t("price")}
                     <FaAngleDown />
                   </DropdownToggle>
                   <DropdownMenu>

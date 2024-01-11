@@ -364,7 +364,7 @@ const PostForm = () => {
                       id="city"
                       placeholder={t("city_placeholder")}
                       name="city"
-                      style={{ border: " 1px solid #A6652C", color: "#fff" }}
+                      style={{ border: " 1px solid #A6652C", color: "#000" }}
                       required
                     />
                   </div>
@@ -469,7 +469,7 @@ const PostForm = () => {
                     toggle={openModal}
                     style={{ border: "none", textAlign: "center" }}
                   >
-                    Ad Posted
+                    {t("adposted")}
                   </ModalHeader>
                   <ModalBody style={{ textAlign: "center" }}>
                     {t("paidAdMessage")}
@@ -516,7 +516,7 @@ const PostForm = () => {
                     toggle={openModel}
                     style={{ border: "none", textAlign: "center" }}
                   >
-                    Ad Posted
+                     {t("adposted")}
                   </ModalHeader>
                   <ModalBody style={{ textAlign: "center" }}>
                     {t("notpaidadmessage")}
@@ -540,7 +540,7 @@ const PostForm = () => {
                       }}
                       className="signin"
                     >
-                      Manage ads
+                      {t("manage_ads")}
                     </button>
                     <button
                       onclick={openModel}
